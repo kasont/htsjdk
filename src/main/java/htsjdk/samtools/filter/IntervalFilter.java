@@ -94,6 +94,6 @@ public class IntervalFilter implements SamRecordFilter {
      * @return true if the SAMRecords matches the filter, otherwise false
      */
     public boolean filterOut(final SAMRecord first, final SAMRecord second) {
-        throw new UnsupportedOperationException("Paired IntervalFilter filter not implemented!");
+        return filterOut(first) || filterOut(second);
     }
 }
